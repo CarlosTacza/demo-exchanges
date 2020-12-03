@@ -79,7 +79,7 @@ public class ExchangeController {
     }
 
     // TODO: REFACTOR HANDLER
-    @GetMapping("/redis/exchange/{profile}")
+    @GetMapping("/cache/exchange/{profile}")
     @ApiOperation(
             value = "Get Exchanges by profile",
             notes = "Endpoint for get exchanges based on profiles and save data in redis",
