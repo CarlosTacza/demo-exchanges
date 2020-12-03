@@ -19,7 +19,7 @@ Demo for Exchange System
 
 **Endpoint 4: GET /cache/exchange/{profile:[LOW, MEDIUM, HIGH]}?date={date}**
 
--Se uso redis como cache para guardar la consulta
+-Se uso redis como cache para guardar la consulta, me quedo pendiente refactorizarlo
 
 **Contrato swagger O openapi**
 
