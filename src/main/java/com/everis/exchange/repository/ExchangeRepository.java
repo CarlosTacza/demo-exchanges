@@ -9,6 +9,6 @@ import java.time.LocalDate;
 
 @Repository
 public interface ExchangeRepository extends ReactiveCrudRepository<Exchange, String> {
-    Flux<Exchange> findByDateBetween(LocalDate startDate, LocalDate endDate);
+  Flux<Exchange> findByDateBetween(LocalDate startDate, LocalDate endDate);
 }
 

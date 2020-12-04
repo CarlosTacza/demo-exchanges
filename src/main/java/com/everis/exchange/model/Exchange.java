@@ -20,32 +20,32 @@ import java.time.LocalDateTime;
 @Table
 public class Exchange {
 
-    @Id
-    @JsonIgnore
-    private Long id;
+  @Id
+  @JsonIgnore
+  private Long id;
 
-    @NotNull(message = "El parámetro buy no puede ser nulo.")
-    @ApiModelProperty(
-            value = "Buy",
-            name = "buy",
-            dataType = "Double",
-            example = "3.52")
-    private Double buy;
+  @NotNull(message = "El parámetro buy no puede ser nulo.")
+  @ApiModelProperty(
+      value = "Buy",
+      name = "buy",
+      dataType = "Double",
+      example = "3.52")
+  private Double buy;
 
-    @NotNull(message = "El parámetro sell no puede ser nulo.")
-    @ApiModelProperty(
-            value = "Sell",
-            name = "sell",
-            dataType = "Double",
-            example = "4.51")
-    private Double sell;
+  @NotNull(message = "El parámetro sell no puede ser nulo.")
+  @ApiModelProperty(
+      value = "Sell",
+      name = "sell",
+      dataType = "Double",
+      example = "4.51")
+  private Double sell;
 
-    @NotNull(message = "El parámetro date no puede ser nulo.")
-    @JsonFormat(pattern="dd-MM-yyyy HH:mm:ss")
-    @ApiModelProperty(
-            value = "Date",
-            name = "date",
-            dataType = "LocalDateTime",
-            example = "10-11-2020 09:45:30")
-    private LocalDateTime date;
+  @NotNull(message = "El parámetro date no puede ser nulo.")
+  @JsonFormat(pattern = "dd-MM-yyyy HH:mm:ss")
+  @ApiModelProperty(
+      value = "Date",
+      name = "date",
+      dataType = "LocalDateTime",
+      example = "10-11-2020 09:45:30")
+  private LocalDateTime date;
 }

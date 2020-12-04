@@ -15,32 +15,31 @@ import java.util.function.Consumer;
 @Slf4j
 @Component
 public class ExchangeCreatedEventProcessor
-        implements ApplicationListener<ExchangeCreated>,
-        Consumer<FluxSink<ExchangeCreated>> {
+    implements ApplicationListener<ExchangeCreated>,
+    Consumer<FluxSink<ExchangeCreated>> {
 
-    private final Executor executor;
-    private final BlockingQueue<ExchangeCreated> queue = new LinkedBlockingQueue<>();
+  private final Executor executor;
+  private final BlockingQueue<ExchangeCreated> queue = new LinkedBlockingQueue<>();
 
-    ExchangeCreatedEventProcessor(Executor executor) {
-        this.executor = executor;
-    }
+  ExchangeCreatedEventProcessor(Executor executor) {
+    this.executor = executor;
+  }
 
-    @Override
-    public void onApplicationEvent(ExchangeCreated event) {
-        this.queue.offer(event);
-    }
+  @Override
+  public void onApplicationEvent(ExchangeCreated event) {
+    this.queue.offer(event);
+  }
 
-    @Override
-    public void accept(FluxSink<ExchangeCreated> sink) {
-        this.executor.execute(() -> {
-            while (true)
-                try {
-                    ExchangeCreated event = queue.take();
-                    sink.next(event);
-                }
-                catch (InterruptedException e) {
-                    ReflectionUtils.rethrowRuntimeException(e);
-                }
-        });
-    }
+  @Override
+  public void accept(FluxSink<ExchangeCreated> sink) {
+    this.executor.execute(() -> {
+      while (true)
+        try {
+          ExchangeCreated event = queue.take();
+          sink.next(event);
+        } catch (InterruptedException e) {
+          ReflectionUtils.rethrowRuntimeException(e);
+        }
+    });
+  }
 }

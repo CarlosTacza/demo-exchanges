@@ -15,15 +15,15 @@ import reactor.core.publisher.Mono;
 @Slf4j
 public class CreateExchangeServiceImpl implements CreateExchangeService {
 
-    private final ExchangeRepository exchangeRepository;
-    private final ApplicationEventPublisher publisher;
+  private final ExchangeRepository exchangeRepository;
+  private final ApplicationEventPublisher publisher;
 
 
-    public Mono<Exchange> createExchange(Exchange exchange) {
-        return exchangeRepository.save(exchange)
-                .map((e) -> {
-                    publisher.publishEvent(new ExchangeCreated(e));
-                    return e;
-                });
-    }
+  public Mono<Exchange> createExchange(Exchange exchange) {
+    return exchangeRepository.save(exchange)
+        .map((e) -> {
+          publisher.publishEvent(new ExchangeCreated(e));
+          return e;
+        });
+  }
 }

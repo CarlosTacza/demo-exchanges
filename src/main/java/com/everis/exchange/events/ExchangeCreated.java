@@ -6,7 +6,7 @@ import org.springframework.context.ApplicationEvent;
 
 @Getter
 public class ExchangeCreated extends ApplicationEvent {
-    public ExchangeCreated(Exchange exchange) {
-        super(exchange);
-    }
+  public ExchangeCreated(Exchange exchange) {
+    super(exchange);
+  }
 }

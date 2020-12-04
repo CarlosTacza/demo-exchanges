@@ -7,5 +7,5 @@ import java.time.LocalDate;
 
 @FunctionalInterface
 public interface GetExchangeService {
-    Mono<Exchange> getExchanges(String profile, LocalDate date);
+  Mono<Exchange> getExchanges(String profile, LocalDate date);
 }

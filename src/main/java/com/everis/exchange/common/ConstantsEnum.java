@@ -6,10 +6,10 @@ import lombok.Getter;
 @Getter
 @AllArgsConstructor
 public enum ConstantsEnum {
-    HIGH("HIGH","El valor mas alto"),
-    MEDIUM("MEDIUM","El promedio"),
-    LOW("LOW","El valor mas bajo");
+  HIGH("HIGH", "El valor mas alto"),
+  MEDIUM("MEDIUM", "El promedio"),
+  LOW("LOW", "El valor mas bajo");
 
-    private String code;
-    private String description;
+  private String code;
+  private String description;
 }
