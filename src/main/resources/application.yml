@@ -1,12 +1,15 @@
 server:
   port: 8082
-  error:
-    include-stacktrace: always
 spring:
   r2dbc:
-    url: r2dbc:pool:mssql://server-intercorp.database.windows.net:1433/BDINTERCORP
-    username: intercorp@server-intercorp
-    password: 6x(MoP&B#ou9Mq$)2
+    url: r2dbc:h2:mem:///testdb
+    username: sa
+    password:
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password:
+    timeout: 5000
 info:
   project:
     version: 1.0-SNAPSHOT

@@ -19,11 +19,13 @@ com/everis/exchange/processors/ExchangeCreatedEventProcessor.java
  com.everis.exchange.processors.ExchangeCreatedEventProcessor
 com/everis/exchange/repository/ExchangeRepository.java
  com.everis.exchange.repository.ExchangeRepository
-com/everis/exchange/common/ConstantsEnum.java
- com.everis.exchange.common.ConstantsEnum
+com/everis/exchange/controller/ExchangeController.java
+ com.everis.exchange.controller.ExchangeController
 com/everis/exchange/MsExchangeApplication.java
  com.everis.exchange.MsExchangeApplication
 com/everis/exchange/service/GetExchangeService.java
  com.everis.exchange.service.GetExchangeService
-com/everis/exchange/controller/ExchangeController.java
- com.everis.exchange.controller.ExchangeController
+com/everis/exchange/common/ConstantsEnum.java
+ com.everis.exchange.common.ConstantsEnum
+com/everis/exchange/config/ApplicationConfig.java
+ com.everis.exchange.config.ApplicationConfig
